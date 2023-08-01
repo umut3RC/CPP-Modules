@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 12:21:52 by uercan            #+#    #+#             */
-/*   Updated: 2023/06/06 16:18:34 by uercan           ###   ########.fr       */
+/*   Created: 2023/05/04 12:25:55 by uercan            #+#    #+#             */
+/*   Updated: 2023/05/18 16:19:40 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#ifndef FIXED_HPP
+# define FIXED_HPP
 
 #include <iostream>
 
-class Harl
+class Fixed
 {
 	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
+		int	_fixed_point;
+		static const int _fract_bit = 8;
 	public:
-		bool	complain(std::string level);
+		Fixed ( void );
+		Fixed ( const Fixed &cpy );
+		~Fixed ();
+		Fixed &operator=( const Fixed &src );
+		int		getRawBits( void ) const;
+		void	setRawBits( int const raw );
 };
-	typedef void (Harl::*t_level) ( void ); //pointers to member functions
+
 #endif

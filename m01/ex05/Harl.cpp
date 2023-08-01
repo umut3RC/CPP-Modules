@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:28:27 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/23 17:45:48 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/17 13:38:25 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	Harl::error ( void )
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-bool	Harl::to_compare(std::string level)
+bool	Harl::complain(std::string level)
 {
 	t_level	level_func[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string level_name[] = {"debug", "info", "warning", "error"};

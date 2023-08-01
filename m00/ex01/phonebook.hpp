@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 11:50:49 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/29 11:50:53 by uercan           ###   ########.fr       */
+/*   Updated: 2023/05/08 16:31:19 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class PhoneBook : Contact
 		}
 		void	search_command(void);
 		void	add_command(void);
-
 };
 
 bool		ft_check_digit(std::string s);

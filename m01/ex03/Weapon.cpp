@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 12:21:52 by uercan            #+#    #+#             */
-/*   Updated: 2023/06/06 16:18:34 by uercan           ###   ########.fr       */
+/*   Created: 2023/04/13 14:31:03 by uercan            #+#    #+#             */
+/*   Updated: 2023/04/13 14:49:26 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "Weapon.hpp"
 
-#include <iostream>
-
-class Harl
+Weapon::Weapon( std::string type)
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		bool	complain(std::string level);
-};
-	typedef void (Harl::*t_level) ( void ); //pointers to member functions
-#endif
+	this->_type = type;
+}
+
+const std::string	&Weapon::getType( void )
+{
+	return (this->_type);
+}
+
+void	Weapon::setType( std::string type)
+{
+	this->_type = type;
+}

@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 12:21:52 by uercan            #+#    #+#             */
-/*   Updated: 2023/06/06 16:18:34 by uercan           ###   ########.fr       */
+/*   Created: 2023/04/13 14:16:55 by uercan            #+#    #+#             */
+/*   Updated: 2023/04/13 16:40:58 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-# define HARL_HPP
+#include "HumanA.hpp"
 
-#include <iostream>
-
-class Harl
+HumanA::HumanA(std::string name, Weapon &weapon)
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		bool	complain(std::string level);
-};
-	typedef void (Harl::*t_level) ( void ); //pointers to member functions
-#endif
+	this->_name = name;
+	this->_weapon = &weapon;
+}
+
+void	HumanA::attack( void )
+{
+	std::cout << this->_name << " attacks with their " << this->_weapon->getType() << std::endl;
+}

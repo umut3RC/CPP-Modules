@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 19:30:26 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/22 14:44:53 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/17 14:28:49 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 std::string	ft_check_replace(std::string full_string, std::string line, std::string old_s, std::string new_s)
 {
 	int	j;
-
+	std::cout << "test" << std::endl;
 	for (int i = 0; line[i]; i++)
 	{
 		j = 0;
@@ -34,8 +34,6 @@ std::string	ft_check_replace(std::string full_string, std::string line, std::str
 
 void	ft_replace(std::string	 file_name, std::string	 old_s, std::string	new_s)
 {
-	(void)old_s;
-	(void)new_s;
 	std::ifstream	f_read(file_name);
 	std::ofstream	f_write(file_name + ".replace");
 	std::string		line;

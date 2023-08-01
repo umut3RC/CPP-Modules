@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 12:21:52 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/21 15:01:23 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/17 12:16:15 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Zombie
 		std::string	_name;
 
 	public:
-		Zombie();
 		Zombie( std::string name );
 		~Zombie();
 		void	announce( void );

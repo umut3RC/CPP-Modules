@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:28:27 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/25 14:39:53 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/17 13:38:25 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	Harl::error ( void )
 
 int	get_level( char *level )
 {
-	std::string level_name[] = {"DEBUG", "INFO", "WARNİNG", "ERROR"};
+	std::string level_name[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	for (int i = 0; i < 4; i++)
 		if (level_name[i] == level)
@@ -52,7 +52,7 @@ int	get_level( char *level )
 	return (-1);
 }
 
-void	Harl::to_compare( char *level )
+void	Harl::complain( char *level )
 {
 	switch (get_level(level))
 	{

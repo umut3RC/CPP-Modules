@@ -6,17 +6,14 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 12:31:09 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/21 16:31:26 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/17 12:29:50 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "zombie.hpp"
 
-Zombie::Zombie() : _name("Undefined"){}
-
-Zombie::Zombie( std::string name)
+Zombie::Zombie()
 {
-	this->_name = name;
 }
 
 Zombie::~Zombie()

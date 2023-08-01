@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 12:21:52 by uercan            #+#    #+#             */
-/*   Updated: 2023/04/17 12:33:18 by uercan           ###   ########.fr       */
+/*   Created: 2023/05/10 12:29:32 by uercan            #+#    #+#             */
+/*   Updated: 2023/05/12 14:53:32 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
 #include <iostream>
+#include "fixed.hpp"
 
-class Zombie
+class Point
 {
 	private:
-		std::string	_name;
-
+		const Fixed _x;
+		const Fixed _y;
 	public:
-		Zombie();
-		~Zombie();
-		void	announce( void );
-		static Zombie*	zombieHorde( int N, std::string name );
-		void	setName(std::string name);
+		Point( void );
+		Point( const Point &cpy );
+		Point ( const float x, const float y );
+		~Point ( void );
+
+		Fixed get_x( void ) const;
+		Fixed get_y( void ) const;
+
+		Point &operator=( const Point &src );
 };
+
+Fixed	calculate_area(Point const a, Point const b, Point const c);
+bool	bsp (Point const a, Point const b, Point const c, Point const point);
 
 #endif
