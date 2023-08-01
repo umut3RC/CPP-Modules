@@ -17,4 +17,8 @@ fclean:
 
 re: clean all
 
+run: re
+	clear
+	./$(NAME)
+
 .PHONY: all clean re

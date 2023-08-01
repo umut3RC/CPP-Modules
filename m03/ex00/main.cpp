@@ -1,4 +1,4 @@
-/* ************************************************************************** */
+      /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
@@ -6,7 +6,7 @@
 /*   By: uercan <uercan@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 19:08:22 by uercan            #+#    #+#             */
-/*   Updated: 2023/03/28 20:51:45 by uercan           ###   ########.fr       */
+/*   Updated: 2023/04/02 15:29:47 by uercan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ Implement and turn in your own tests to ensure your code works as expected.
 ClapTrap olarak adlandırılacak ve aşağıdaki özel nitelikler başlatılacak
 parantez içinde belirtilen değerlere:
 • Yapıcıya parametre olarak iletilen ad
-• Can puanı (10), ClapTrap'in sağlığını temsil eder
-• Enerji noktaları (10)
-• Saldırı gücü (0)
+• Hit points (10), ClapTrap'in sağlığını temsil eder
+• Energy points (10)
+•Attack damage (0)
 ClapTrap'in daha gerçekçi görünmesi için aşağıdaki ortak üye işlevlerini ekleyin:
 • void attack(const std::string& target);
 • void takeDamage(unsigned int amount);
@@ -67,13 +67,33 @@ Kodunuzun beklendiği gibi çalıştığından emin olmak için kendi testlerini
 
 #include "ClapTrap.hpp"
 
-int	main( void )
-{
-	ClapTrap	a("AA");
+// int	main( void )
+// {
+// 	ClapTrap	a("AA");
 
-	a.hit_point(100);
-	a.attack("bb");
-	a.takeDamage(10);
-	a.beRepaired(5);
+// 	a.hit_point(100);
+// 	a.attack("bb");
+// 	a.takeDamage(10);
+// 	a.beRepaired(5);
+// 	return (0);
+// }
+
+int	main()
+{
+	ClapTrap	p1;
+	ClapTrap	p2("player2");
+	ClapTrap	p3("player3");
+	ClapTrap	p4(p2);
+	ClapTrap	p5 = p3;
+
+	p4 = p5;
+	p1.attack("player2");
+	p2.attack("player1");
+	p2.takeDamage(5);
+	std::cout << std::endl;
+	p1.beRepaired(10);
+	std::cout << std::endl;
+	p2.beRepaired(10);
+	std::cout << std::endl;
 	return (0);
 }
